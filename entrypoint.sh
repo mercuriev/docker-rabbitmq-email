@@ -1,4 +1,3 @@
-#!/bin/sh
-sed -i "s/example.com/$TENANT_DOMAIN/g" /etc/rabbitmq/advanced.config
-cat /usr/local/bin/docker-entrypoint.sh
-bash /usr/local/bin/docker-entrypoint.sh $@
+#!/bin/bash
+sed -i "s/tenant.com/$MAILNAME/g" /etc/rabbitmq/advanced.config
+bash /usr/local/bin/docker-entrypoint.sh "$@"
