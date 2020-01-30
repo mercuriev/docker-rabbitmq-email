@@ -5,6 +5,7 @@ RUN chown -R rabbitmq: /opt/rabbitmq/plugins/
 
 RUN rabbitmq-plugins enable --offline rabbitmq_tracing rabbitmq_delayed_message_exchange rabbitmq_email
 
+COPY rabbitmq.conf /etc/rabbitmq/
 COPY advanced.config /etc/rabbitmq/
 
 COPY entrypoint.sh /entrypoint.sh
